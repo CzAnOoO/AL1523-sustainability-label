@@ -4,20 +4,38 @@
     <title>Eco-Label</title>
     <style>
       /* CSS */
+      .box input[type="range"] {
+        width: 85%;
+        height: 8px;
+      }
+
+      .box input[type="range"]::-webkit-slider-runnable-track {
+        width: 85%;
+        background: #3b4a56;
+        /* background: linear-gradient(
+          to right,
+          #df5e6d 0%,
+          #fceb57 50%,
+          #97c775 100%
+        ); */
+        border-radius: 10px;
+      }
+
+      .box {
+        background-color: #ececec;
+        text-align: center;
+        max-width: 330px;
+        max-height: 200px;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 5px rgba(151, 151, 151, 0.2);
+      }
     </style>
   </head>
   <body>
     <!-- <h1>WWF guide label</h1> -->
-    <div
-      style="
-        background-color: lightgray;
-        text-align: center;
-        max-width: 330px;
-        max-height: 200px;
-        padding: 30px;
-        margin: 20px;
-      "
-    >
+    <div class="box">
       <!------ SVG ------>
       <svg viewBox="0 0 2000 2000" width="500" height="500">
         <!-- Bar -->
@@ -207,7 +225,7 @@
       </svg>
     </div>
 
-    <div class="controls">
+    <div class="box">
       <input type="range" min="0" max="100" oninput="update(this.value)" />
     </div>
 
